@@ -1,9 +1,9 @@
-package com.example.secservice.security.web;
+package com.example.secservice.web;
 
-import com.example.secservice.security.dto.RoleUserForm;
-import com.example.secservice.security.entities.AppRole;
-import com.example.secservice.security.entities.AppUser;
-import com.example.secservice.security.service.AccountService;
+import com.example.secservice.dto.RoleUserForm;
+import com.example.secservice.entities.AppRole;
+import com.example.secservice.entities.AppUser;
+import com.example.secservice.service.AccountService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,10 +20,10 @@ public class AccountRestController {
     public List<AppUser> appUsers(){
         return accountService.listUsers();
     }
-    @PostMapping(path = "/user")
+/*    @PostMapping(path = "/user")
     public AppUser saveUser(@RequestBody AppUser appUser){
         return accountService.addNewUser(appUser);
-    }
+    }*/
     @PostMapping(path = "/role")
     public AppRole saveRole(@RequestBody AppRole appRole){
         return accountService.addNewRole(appRole);

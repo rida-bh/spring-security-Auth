@@ -1,4 +1,4 @@
-package com.example.secservice.security.entities;
+package com.example.secservice.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

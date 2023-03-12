@@ -1,7 +1,6 @@
-package com.example.secservice.security.repositories;
+package com.example.secservice.repositories;
 
-import com.example.secservice.security.entities.AppRole;
-import com.example.secservice.security.entities.AppUser;
+import com.example.secservice.entities.AppRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AppRoleRepositoriy extends JpaRepository<AppRole,Long> {

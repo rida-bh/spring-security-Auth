@@ -1,4 +1,4 @@
-package com.example.secservice.security.entities;
+package com.example.secservice.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;

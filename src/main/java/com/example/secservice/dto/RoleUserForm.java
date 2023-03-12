@@ -1,4 +1,4 @@
-package com.example.secservice.security.dto;
+package com.example.secservice.dto;
 
 import lombok.Data;
 

@@ -1,8 +1,8 @@
 package com.example.secservice;
 
-import com.example.secservice.security.entities.AppRole;
-import com.example.secservice.security.entities.AppUser;
-import com.example.secservice.security.service.AccountService;
+import com.example.secservice.entities.AppRole;
+import com.example.secservice.entities.AppUser;
+import com.example.secservice.service.AccountService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,10 +18,7 @@ public class SecServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(SecServiceApplication.class, args);
     }
-    @Bean
-    PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
+
     @Bean
     CommandLineRunner start(AccountService accountService){
         return args -> {
@@ -30,7 +27,7 @@ public class SecServiceApplication {
             accountService.addNewRole(new AppRole(null,"ADMIN"));
             accountService.addNewRole(new AppRole(null,"PRODUCT_MANAGER"));
             accountService.addNewRole(new AppRole(null,"HR_MANAGER"));
-            accountService.addNewUser(new AppUser(null,"user0","123456",new ArrayList<>()));
+/*            accountService.addNewUser(new AppUser(null,"user0","123456",new ArrayList<>()));
             accountService.addNewUser(new AppUser(null,"user1","123456",new ArrayList<>()));
             accountService.addNewUser(new AppUser(null,"user2","123456",new ArrayList<>()));
             accountService.addNewUser(new AppUser(null,"user3","123456",new ArrayList<>()));
@@ -42,7 +39,7 @@ public class SecServiceApplication {
             accountService.addRoleToUser("user1","USER");
             accountService.addRoleToUser("user2","USER");
             accountService.addRoleToUser("admin","ADMIN");
-            accountService.addRoleToUser("admin","USER");
+            accountService.addRoleToUser("admin","USER");*/
         };
     }
 }
